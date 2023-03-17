@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Create Bot</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="bot_name">Bot Name</label>
+            <input type="text" class="form-control" id="bot_name" name="bot_name" required>
+        </div>
+        <div class="form-group">
+            <label for="bot_symbol">Bot Symbol</label>
+            <input type="text" class="form-control" id="bot_symbol" name="bot_symbol" required>
+        </div>
+        <div class="form-group">
+            <label for="bot_budget">Bot Budget</label>
+            <input type="number" class="form-control" id="bot_budget" name="bot_budget" required>
+        </div>
+        <div class="form-group">
+            <label for="bot_quantity">Bot Quantity</label>
+            <input type="number" class="form-control" id="bot_quantity" name="bot_quantity" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+{% endblock %}
