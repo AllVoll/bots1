@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+</head>
+<body>
+    <h1>General settings:</h1>
+
+    <h2>API settings:</h2>
+    <form>
+        <label for="api_key">API key:</label>
+        <input type="text" name="api_key" id="api_key"><br><br>
+
+        <label for="api_secret_key">API secret key:</label>
+        <input type="text" name="api_secret_key" id="api_secret_key"><br><br>
+
+        <input type="submit" value="Save">
+    </form>
+
+    <h2>Список API ключей:</h2>
+    <ul>
+    {% for key in api_keys %}
+        <li>{{ key.key }} / {{ key.secret }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Список торговых пар:</h2>
+    <ul>
+    {% for pair in pairs %}
+        <li>{{ pair }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Wallets:</h2>
+    <table>
+        <tr>
+            <th>Address</th>
+            <th>Balance</th>
+        </tr>
+        <tr>
+            <td>Wallet 1</td>
+            <td>0.5 BTC</td>
+        </tr>
+        <tr>
+            <td>Wallet 2</td>
+            <td>1 ETH</td>
+        </tr>
+        <tr>
+            <td>Wallet 3</td>
+            <td>1000 USDT</td>
+        </tr>
+    </table>
+
+    <h2>Strategies:</h2>
+    <ul>
+        <li>Strategy 1 - Parameter 1, Parameter 2, Parameter 3</li>
+        <li>Strategy 2 - Parameter 1, Parameter 2, Parameter 3</li>
+        <li>Strategy 3 - Parameter 1, Parameter 2, Parameter 3</li>
+    </ul>
+</body>
+</html>
