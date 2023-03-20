@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная страница</title>
+  <!-- Подключаем стили Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Подключаем иконки Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-aug5U6+qOm6JpUzxf0x/e33MIyPbJRFtuEwUkgukZI2Yw1vhkp2QxOmcZtTp0vvJTG7W8De0LNAOWF1CF5Q5Yg==" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+  <style>
+    /* Стили для боковой панели */
+    #sidebar {
+      min-width: 200px;
+      max-width: 200px;
+      min-height: 100vh;
+      background: #7386D5;
+      color: #fff;
+      transition: all 0.3s;
+    }
+    #sidebar .sidebar-header {
+      padding: 20px;
+      background: #6d7fcc;
+    }
+    #sidebar ul.components {
+      padding: 20px 0;
+    }
+    #sidebar ul p {
+      color: #fff;
+      padding: 10px;
+    }
+    #sidebar ul li a {
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
+    }
+    #sidebar ul li a:hover {
+      color: #7386D5;
+      background: #fff;
+    }
+    /* Стили для основного содержимого страницы */
+    #content {
+      width: 100%;
+      padding: 20px;
+      transition: all 0.3s;
+    }
+    /* Стили для кнопки открытия/закрытия боковой панели на малых экранах */
+    @media (max-width: 768px) {
+      #sidebar {
+        min-width: 0;
+        max-width: none;
+        overflow: hidden;
+        display: none;
+      }
+      #content {
+        margin-left: 0;
+      }
+      #sidebar.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Боковая панель -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Меню</h3>
+      </div>
+      <ul class="list-unstyled components">
+        <p>Категории:</p>
+        <li>
+          <a href="#">Главная</a>
+        </li>
+        <li>
+<!-- Sidebar -->
+<div class="sidebar">
+  <ul>
+      <li><a href="settings.html">Общие настройки</a></li>
+      <li><a href="create_bot.html">Новый бот</a></li>
+      <li><a href="bot_list.html">Спиок ботов</a></li>
+      <li><a href="bot_stat.html">Статистика ботов</a></li>
+      <li><a href="charts.html">Графики</a></li>
+  </ul>
+</div>
+<!-- End Sidebar -->
