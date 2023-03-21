@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bots List</title>
+</head>
+<body>
+    <h1>Bots List</h1>
+    <ul>
+        {% for bot in bot_list %}
+        <li>{{ bot.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
