@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Настройки</title>
+</head>
+<body>
+    <h1>API</h1>
+    <ul>
+        {% for api in api_list %}
+            <li><a href="{{ url_for('api_manager') }}">{{ api }}</a></li>
+        {% endfor %}
+    </ul>
+    
+    <h1>Списки торговых пар</h1>
+    <ul>
+        {% for coinlist in coinlist_list %}
+            <li><a href="{{ url_for('coinlist_manager') }}">{{ coinlist }}</a></li>
+        {% endfor %}
+    </ul>
+    
+    <h1>Кошельки</h1>
+    <ul>
+        {% for depo in depo_list %}
+            <li><a href="{{ url_for('depo_manager') }}">{{ depo }}</a></li>
+        {% endfor %}
+    </ul>
+    
+    <h1>Стратегии</h1>
+    <ul>
+        {% for strategy in strategy_list %}
+            <li><a href="{{ url_for('strategy_manager') }}">{{ strategy }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
