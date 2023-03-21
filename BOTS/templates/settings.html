@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная страница</title>
+  <!-- Подключаем стили Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Подключаем иконки Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-aug5U6+qOm6JpUzxf0x/e33MIyPbJRFtuEwUkgukZI2Yw1vhkp2QxOmcZtTp0vvJTG7W8De0LNAOWF1CF5Q5Yg==" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+  <style>
+   
+    /* Стили для основного содержимого страницы */
+    #content {
+      width: 100%;
+      padding: 20px;
+      transition: all 0.3s;
+    }
+    /* Стили для кнопки открытия/закрытия боковой панели на малых экранах */
+    @media (max-width: 768px) {
+      #sidebar {
+        min-width: 0;
+        max-width: none;
+        overflow: hidden;
+        display: none;
+      }
+      #content {
+        margin-left: 0;
+      }
+      #sidebar.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="container">
+        {% include 'sidebar.html' %}
+        <div class="main">
+            <h1>Общие настройки</h1>
+            <div class="settings">
+                <h2>API-менеджер</h2>
+                <p>Список всех введеных API</p>
+                <!-- Здесь может быть код для отображения списка API -->
+                <h2>Список торговых пар</h2>
+                <p>Перечень созданых Ч/Б списков торговых пар</p>
+                <!-- Здесь может быть код для отображения списка торговых пар -->
+                <h2>Депозит-менеджер</h2>
+                <p>Список кошельков (балансов)</p>
+                <!-- Здесь может быть код для отображения списка кошельков -->
+                <h2>Менеджер стратегий</h2>
+                <p>Список созданых стратегий</p>
+                <!-- Здесь может быть код для отображения списка стратегий -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

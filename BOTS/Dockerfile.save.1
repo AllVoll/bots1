@@ -1,0 +1,18 @@
+FROM python:3.11-slim as base
+
+# Сборка зависимостей
+RUN apt-get update && apt-get install -y gc libta-lib0 libta-lib0-dev
+RUN pip install ta-lib==0.4.0 --no-binary :all:
+
+# Инициализация проекта
+WORKDIR /app
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+COPY requirements.txt /app
+RUN pip install -r requirements.txt
+
+# Копирование в контейнер папок и файлов.
+COPY . .
+
