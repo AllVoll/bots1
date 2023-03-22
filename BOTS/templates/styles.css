@@ -1,0 +1,15 @@
+.sidebar {
+    background-color: #262626;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  .sidebar a {
+    color: #ffffff;
+  }
+  
+  .sidebar a:hover {
+    color: #99ccff;
+  }
+  
