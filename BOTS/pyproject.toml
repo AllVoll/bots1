@@ -1,0 +1,7 @@
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^2.1.1"
+numpy = "^1.22.0"
+pandas = "^1.4.1"
+ta-lib = "^0.4.0"
+python-binance = "^1.0.12"
